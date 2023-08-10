@@ -21,6 +21,21 @@
   outline: none;
   border: none;
 }
+@media (max-width: 768px) {
+  .text-container {
+    width: 90%;
+  }
+  .main-heading {
+    font-size: 20px;
+    text-align: center;
+  }
+  .input {
+    width: 200px;
+  }
+  .results2 {
+    font-size: 5px;
+  }
+}
 .you-tube-image {
   height: 100px;
   width: 100px;
@@ -138,4 +153,19 @@ button:hover {
   text-align: center;
   font-size: 15px;
   color: #800080;
+}
+
+@media (max-width: 768px) {
+  .results2 {
+    font-size: 10px;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  .special-input {
+    width: 250px;
+  }
+  .you-tube-image {
+    width: 150px;
+    height: 150px;
+  }
 }
