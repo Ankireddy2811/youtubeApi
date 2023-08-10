@@ -72,6 +72,7 @@ class SearchVolume extends Component {
               value={keyWord}
               placeholder="Enter your keyword here..."
               onChange={this.onInputEleChange}
+              className="special-input"
             />
             <button type="button" onClick={this.onButtonClicked}>
               Check Search Volume
