@@ -23,25 +23,27 @@ class SearchVolume extends Component {
 
     const {keyWord} = this.state
     const API_KEY = 'AIzaSyCo6cMKgcB_bUtEFCNZf-81RUU1M7cu1uw'
+    const publishedAfter = '2022-08-22'
+    const publishedBefore = '2023-08-22'
     const response = await fetch(
-      `https://www.googleapis.com/youtube/v3/search?q=${encodeURIComponent(
+      `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(
         keyWord,
-      )}&key=${API_KEY}`,
+      )}&key=${API_KEY}&publishedAfter=${publishedAfter}T00:00:00Z&publishedBefore=${publishedBefore}T00:00:00Z`,
     )
     // console.log(response)
     const data = await response.json()
-    // console.log(data)
+    console.log(data)
     const searchCountValue = data.pageInfo.totalResults
-    // console.log(searchCountValue)
+    const avg = (searchCountValue / 12).toFixed(2)
     if (response.ok === true) {
       this.setState({
-        countValue: searchCountValue,
+        countValue: avg,
         apiStatus: true,
       })
     }
-
-    // console.error('Error fetching search volume:', error);
   }
+
+  // console.error('Error fetching search volume:', error);
 
   renderLoadingView = () => (
     <div className="products-loader-container">
@@ -66,14 +68,16 @@ class SearchVolume extends Component {
             className="you-tube-image"
           />
           <h1 className="main-heading">Keyword Search Volume Checker</h1>
+
           <div className="input-container">
             <input
               type="search"
               value={keyWord}
               placeholder="Enter your keyword here..."
               onChange={this.onInputEleChange}
-              className="special-input"
+              className="search-input"
             />
+
             <button type="button" onClick={this.onButtonClicked}>
               Check Search Volume
             </button>
@@ -89,3 +93,5 @@ class SearchVolume extends Component {
 }
 
 export default SearchVolume
+
+    
