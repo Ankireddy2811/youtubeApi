@@ -25,4 +25,6 @@ The app is styled using CSS. You can customize the styles by editing the `index.
 - The calculated average search volume is divided by 12 months(from 2022-08-22 to 2023-08-22)to provide an average per month.
 - The search volume data is retrieved from the YouTube API.
 
+##Folders
+All components you implement should go in the src/components directory.
 
