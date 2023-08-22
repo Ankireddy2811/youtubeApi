@@ -28,5 +28,5 @@ The app is styled using CSS. You can customize the styles by editing the `index.
 ##Folders
 
 
-All components you implement should go in the src/components directory.
+All components implements in the src/components directory.
 
