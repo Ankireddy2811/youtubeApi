@@ -26,5 +26,7 @@ The app is styled using CSS. You can customize the styles by editing the `index.
 - The search volume data is retrieved from the YouTube API.
 
 ##Folders
+
+
 All components you implement should go in the src/components directory.
 
