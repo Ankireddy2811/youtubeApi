@@ -1,32 +1,28 @@
-In this project, let's build a Youtube Volume Search.
+# Keyword Search Volume Analyzer
 
-### Design Files
+This is a React app that allows you to analyze the average search volume for a given keyword on YouTube over a specific time period. It retrieves data from the YouTube API and calculates the average search volume based on the returned results.
 
-<details>
+## Getting Started
 
-- Download dependencies by running `npm install`
-- Start up the app using `npm start`
-</details>
+1. Clone this repository to your local machine.
+2. Open the project folder in your preferred code editor.
+3. Run `npm install` to install the required dependencies.
+4. Replace `'YOUTUBE_API_KEY'` in `App.js` with your actual YouTube API key.
+5. Run `npm start` to start the development server.
 
-### Completion Instructions
+## How to Use
 
-### fetch the resources using fetch method
+1. Enter a keyword in the input field.
+2. Click the "Search" button to calculate the average search volume for the keyword.
+3. The calculated average search volume will be displayed below the button.
 
-### create the API key using Documentation
+## Styling
 
-<details>
-<summary>Functionality to be added</summary>
+The app is styled using CSS. You can customize the styles by editing the `index.css` file.
 
-<details>
-<summary>Font-families</summary>
+## Note
 
-- Roboto
+- The calculated average search volume is divided by 12 months(from 2022-08-22 to 2023-08-22)to provide an average per month.
+- The search volume data is retrieved from the YouTube API.
 
-</details>
 
-> ### _Things to Keep in Mind_
->
-> - All components you implement should go in the `src/components` directory.
-> - Don't change the component folder names as those are the files being imported into the tests.
-> - **Do not remove the pre-filled code**
-> - Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.
